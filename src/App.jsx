@@ -1,6 +1,5 @@
-// src/App.jsx
 import React from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter, Route, Routes, Link } from 'react-router-dom';
 import FirstRejection from './components/FirstRejection';
 import DreamJobRejection from './components/DreamJobRejection';
 import MultipleRejections from './components/MultipleRejections';
@@ -9,7 +8,7 @@ import './styles/main.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="nav-menu">
         <Link to="/">Home</Link>
         <Link to="/first-rejection">First Job Rejection</Link>
@@ -22,7 +21,7 @@ function App() {
         <Route path="/dream-job-rejection" element={<DreamJobRejection />} />
         <Route path="/multiple-rejections" element={<MultipleRejections />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
