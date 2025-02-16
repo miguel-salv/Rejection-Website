@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourceCard from './shared/ResourceCard';
+import dreamJobImage from '../images/dream-job.svg';
 
 function DreamJobRejection() {
   const resources = [
@@ -25,15 +26,26 @@ function DreamJobRejection() {
 
   return (
     <div className="page-container">
-      <h1>Got Rejected from Your Dream Job? Here's How to Move Forward</h1>
-      <p>
-        It’s natural to feel hurt and disappointed. Allow yourself the space to grieve this loss — your feelings matter.
-      </p>
+      <header className="page-header">
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Lost Out on a Dream Role? Let's Move Forward Together</h1>
+            <p>
+              It's natural to feel disappointed. Give yourself time to process the setback, but remember that this is just one step in your professional journey. You can bounce back stronger.
+            </p>
+          </div>
+          <img 
+            src={dreamJobImage} 
+            alt="Dream job illustration" 
+            className="header-image"
+          />
+        </div>
+      </header>
       <h2>Steps to Rebuild:</h2>
       <ul>
-        <li style={{ '--li-index': 1 }}>Reflect on the experience with kindness and learn what you can</li>
-        <li style={{ '--li-index': 2 }}>Consider reapplying in the future when you feel ready</li>
-        <li style={{ '--li-index': 3 }}>Explore alternative paths that might excite you</li>
+        <li style={{ '--li-index': 1 }}>Reflect honestly on the experience, focusing on lessons learned</li>
+        <li style={{ '--li-index': 2 }}>Consider reapplying or exploring organizations with similar missions</li>
+        <li style={{ '--li-index': 3 }}>Stay open to new opportunities and career pivots</li>
       </ul>
       
       <section className="resources-section">

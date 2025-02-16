@@ -2,7 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ResourceCard from './shared/ResourceCard';
-import '../styles/home.css'; // We'll create this new file for HomePage-specific styles
+import '../styles/home.css';
+// Import your images
+import supportImage from '../images/support.svg';
+import growthImage from '../images/growth.svg';
+import communityImage from '../images/community.svg';
 
 function HomePage() {
   const resources = [
@@ -29,16 +33,34 @@ function HomePage() {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Support and Guidance After Job Rejection</h1>
-        <p className="header-subtitle">
-          Carefully curated, gentle guidance and resources to help you through this challenging time.
-        </p>
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Support and Guidance After Job Rejection</h1>
+            <p className="header-subtitle">
+              Discover gentle support and actionable advice to help you transform setbacks into stepping stones for growth.
+            </p>
+          </div>
+          <img 
+            src={supportImage} 
+            alt="Supportive illustration" 
+            className="header-image"
+          />
+        </div>
       </header>
 
       <section className="main-content">
         <div className="section-block">
-          <h2>How to Use This Support</h2>
-          <p>Explore the topics below to find the help that best suits your situation:</p>
+          <div className="section-header">
+            <img 
+              src={growthImage} 
+              alt="Growth illustration" 
+              className="section-image"
+            />
+            <div>
+              <h2>How to Use This Support</h2>
+              <p>Explore the topics below to find the help that best suits your situation:</p>
+            </div>
+          </div>
           <div className="navigation-cards">
             <Link to="/first-rejection" className="nav-card">
               <h3>First Job Rejection</h3>
@@ -56,7 +78,16 @@ function HomePage() {
         </div>
 
         <div className="section-block">
-          <h2>General Tips for Healing and Growth</h2>
+          <div className="section-header">
+            <div>
+              <h2>General Tips for Healing and Growth</h2>
+            </div>
+            <img 
+              src={communityImage} 
+              alt="Community support illustration" 
+              className="section-image"
+            />
+          </div>
           <div className="tips-grid">
             {[
               "Prioritize self-care and give yourself time to heal",

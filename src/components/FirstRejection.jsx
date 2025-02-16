@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourceCard from './shared/ResourceCard';
+import firstRejectionImage from '../images/first-rejection.svg';
 
 function FirstRejection() {
   const resources = [
@@ -25,13 +26,21 @@ function FirstRejection() {
 
   return (
     <div className="page-container">
-      <h1>First Time Getting Rejected? Keep Going</h1>
-      <p>
-        Remember, rejection is a common experience and just one part of your journey. It does not define your worth.
-      </p>
-      <p>
-        Take a moment to reflect on what this experience might teach you; every setback holds a lesson.
-      </p>
+      <header className="page-header">
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Your First Rejection: A Step Toward Growth</h1>
+            <p>
+              Remember, every rejection is an opportunity in disguise. Reflect on the lessons learned and use them to sharpen your approach.
+            </p>
+          </div>
+          <img 
+            src={firstRejectionImage} 
+            alt="Starting fresh illustration" 
+            className="header-image"
+          />
+        </div>
+      </header>
       <h2>Simple Next Steps:</h2>
       <ul>
         <li style={{ '--li-index': 1 }}>Consider asking for constructive feedback</li>

@@ -5,11 +5,13 @@ import DreamJobRejection from './components/DreamJobRejection';
 import MultipleRejections from './components/MultipleRejections';
 import HomePage from './components/HomePage';
 import DarkModeToggle from './components/shared/DarkModeToggle';
+import ScrollToTop from './components/shared/ScrollToTop';
 import './styles/main.css';
 
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="nav-menu">
         <Link to="/">Home</Link>
         <Link to="/first-rejection">First Job Rejection</Link>

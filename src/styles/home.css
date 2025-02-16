@@ -91,6 +91,60 @@
   color: var(--text-secondary);
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-image {
+  width: 300px;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(107, 99, 255, 0.15));
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-image {
+  width: 200px;
+  height: auto;
+  animation: fadeIn 1s ease-out;
+  filter: drop-shadow(0 0 15px rgba(107, 99, 255, 0.15));
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Add a floating animation for images */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @media (max-width: 768px) {
   .home-container {
       padding: 1rem;
@@ -104,4 +158,57 @@
   .resources-grid {
       grid-template-columns: 1fr;
   }
+
+  .header-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .header-image {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-image {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Add subtle glow effect for dark mode */
+[data-theme='dark'] .header-image,
+[data-theme='dark'] .section-image {
+  filter: drop-shadow(0 0 15px rgba(107, 99, 255, 0.1));
+}
+
+/* Add subtle background glow */
+.header-content::after, .section-header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--link-color) 0%, transparent 80%);
+  opacity: 0.03;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Adjust the glow for dark mode */
+[data-theme='dark'] .header-content::after,
+[data-theme='dark'] .section-header::after {
+  opacity: 0.05;
+}
+
+/* Ensure smooth transitions */
+.header-image, .section-image,
+.header-content::after, .section-header::after {
+  transition: all 0.3s ease;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourceCard from './shared/ResourceCard';
+import multipleRejectionsImage from '../images/multiple-rejections.svg';
 
 function MultipleRejections() {
   const resources = [
@@ -25,17 +26,30 @@ function MultipleRejections() {
 
   return (
     <div className="page-container">
-      <h1>Facing Multiple Rejections? We're Here for You</h1>
-      <p>Remember, it’s normal to feel overwhelmed. Every rejection is part of your unique journey.</p>
+      <header className="page-header">
+        <div className="header-content">
+          <div className="header-text">
+            <h1>Facing Multiple Rejections? Build Your Resilience</h1>
+            <p>
+            It's normal to feel challenged when the setbacks add up. Each rejection brings you closer to discovering the right opportunity—keep moving forward.
+            </p>
+          </div>
+          <img 
+            src={multipleRejectionsImage} 
+            alt="Persistence illustration" 
+            className="header-image"
+          />
+        </div>
+      </header>
       <h2>Gentle Advice:</h2>
       <ul>
         <li style={{ '--li-index': 1 }}>Consider revisiting your approach by tailoring your applications and exploring new opportunities</li>
       </ul>
       <h2>Steps to Move Forward:</h2>
       <ul>
-        <li style={{ '--li-index': 2 }}>Explore upskilling opportunities</li>
-        <li style={{ '--li-index': 3 }}>Connect with supportive communities</li>
-        <li style={{ '--li-index': 4 }}>Consider speaking with a career coach for personalized guidance</li>
+        <li style={{ '--li-index': 1 }}>Tailor your applications by learning from past experiences</li>
+        <li style={{ '--li-index': 2 }}>Invest in upskilling to boost your confidence and profile</li>
+        <li style={{ '--li-index': 3 }}>Lean on supportive communities and mentorship for advice</li>
       </ul>
       
       <section className="resources-section">

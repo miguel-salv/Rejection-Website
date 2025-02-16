@@ -9,7 +9,7 @@
   --nav-bg: rgba(255, 255, 255, 0.95);
   --border-color: rgba(0, 0, 0, 0.08);
   --shadow-color: rgba(0, 0, 0, 0.06);
-  --link-color: #4a90e2;
+  --link-color: #6B63FF;
   --heading-color: #1a202c;
 }
 
@@ -22,7 +22,7 @@
   --nav-bg: rgba(45, 55, 72, 0.95);
   --border-color: rgba(255, 255, 255, 0.08);
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --link-color: #63b3ed;
+  --link-color: #6B63FF;
   --heading-color: #f7fafc;
 }
 
@@ -320,4 +320,47 @@ div {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Add after your existing styles */
+
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-image {
+  width: 300px;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .header-image {
+    width: 200px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* If you don't already have the float animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
