@@ -8,7 +8,9 @@ function ResourceCard({ title, description, url, icon }) {
       rel="noopener noreferrer"
       className="resource-card"
     >
-      <span className="resource-icon">{icon}</span>
+      <span className="resource-icon">
+        {typeof icon === 'string' ? icon : icon}
+      </span>
       <h3>{title}</h3>
       {description && <p>{description}</p>}
     </a>

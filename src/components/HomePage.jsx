@@ -10,19 +10,19 @@ function HomePage() {
       title: "Community Support",
       description: "Connect with others sharing similar experiences",
       url: "https://www.reddit.com/r/careerguidance",
-      icon: "🤝"
+      icon: <i className="fas fa-hands-helping"></i>
     },
     {
       title: "Resume Improvements",
       description: "Create or enhance your resume",
       url: "https://www.canva.com/resumes/",
-      icon: "📄"
+      icon: <i className="fas fa-file-alt"></i>
     },
     {
       title: "Personal Growth",
       description: "Resources for professional development",
       url: "https://www.mindtools.com",
-      icon: "🌱"
+      icon: <i className="fas fa-seedling"></i>
     }
   ];
 

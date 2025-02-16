@@ -7,19 +7,19 @@ function MultipleRejections() {
       title: "Job Search Strategy",
       description: "Optimize your job search approach",
       url: "https://www.indeed.com/career-advice/finding-a-job",
-      icon: "📊"
+      icon: <i className="fas fa-chart-line"></i>
     },
     {
       title: "Professional Development",
       description: "Enhance your skills and qualifications",
       url: "https://www.coursera.org",
-      icon: "📚"
+      icon: <i className="fas fa-book"></i>
     },
     {
       title: "Mental Health Support",
       description: "Resources for maintaining resilience",
       url: "https://www.betterhelp.com",
-      icon: "🌟"
+      icon: <i className="fas fa-star"></i>
     }
   ];
 

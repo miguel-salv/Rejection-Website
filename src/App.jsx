@@ -4,6 +4,7 @@ import FirstRejection from './components/FirstRejection';
 import DreamJobRejection from './components/DreamJobRejection';
 import MultipleRejections from './components/MultipleRejections';
 import HomePage from './components/HomePage';
+import DarkModeToggle from './components/shared/DarkModeToggle';
 import './styles/main.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Link to="/first-rejection">First Job Rejection</Link>
         <Link to="/dream-job-rejection">Rejection from Your Dream Job</Link>
         <Link to="/multiple-rejections">Facing Multiple Rejections</Link>
+        <DarkModeToggle />
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />

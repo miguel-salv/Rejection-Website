@@ -7,19 +7,19 @@ function FirstRejection() {
       title: "Resume Writing Tips",
       description: "Learn how to improve your resume",
       url: "https://www.indeed.com/career-advice/resumes-cover-letters",
-      icon: "📝"
+      icon: <i className="fas fa-file-alt"></i>
     },
     {
       title: "Interview Preparation",
       description: "Practice common interview questions",
       url: "https://www.glassdoor.com/Interview/index.htm",
-      icon: "🎯"
+      icon: <i className="fas fa-bullseye"></i>
     },
     {
       title: "Career Counseling",
       description: "Find professional guidance",
       url: "https://www.careercounselors.org",
-      icon: "💡"
+      icon: <i className="fas fa-lightbulb"></i>
     }
   ];
 

@@ -7,19 +7,19 @@ function DreamJobRejection() {
       title: "Career Pivoting",
       description: "Explore alternative career paths",
       url: "https://www.themuse.com/advice/career-pivot",
-      icon: "🔄"
+      icon: <i className="fas fa-sync-alt"></i>
     },
     {
       title: "Mindfulness Resources",
       description: "Tools for emotional well-being",
       url: "https://www.mindful.org",
-      icon: "🧘"
+      icon: <i className="fas fa-spa"></i>
     },
     {
       title: "Networking Guide",
       description: "Build meaningful professional connections",
       url: "https://www.linkedin.com/learning",
-      icon: "🤝"
+      icon: <i className="fas fa-network-wired"></i>
     }
   ];
 

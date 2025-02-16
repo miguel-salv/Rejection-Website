@@ -1,38 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  /* Light theme variables */
+  --background: #f6f9fc;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.06);
+  --link-color: #4a90e2;
+  --heading-color: #1a202c;
+}
+
+[data-theme='dark'] {
+  /* Dark theme variables */
+  --background: #1a1c1e;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --card-bg: #2d3748;
+  --nav-bg: rgba(45, 55, 72, 0.95);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --link-color: #63b3ed;
+  --heading-color: #f7fafc;
+}
+
 /* Global Styles */
-body {
-    background: linear-gradient(135deg, #f6f9fc, #eef2f7);
-    color: #2d3748;
-    font-family: 'Poppins', sans-serif;
+html, body {
+    background: var(--background) !important;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+html {
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
     margin-top: 80px;
     line-height: 1.8;
 }
 
-/* Enhanced Navigation Menu */
 .nav-menu {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     padding: 1.2rem 2rem;
     display: flex;
-    justify-content: center;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
     gap: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    width: 100%;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    width: calc(100% - 4rem); /* Account for padding */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     margin: 0;
     max-width: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid var(--shadow-color);
     animation: textFadeIn 0.6s ease-out forwards;
 }
 
 .nav-menu a {
-    color: #2d3748;
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -49,12 +84,12 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #4a90e2;
+    background: var(--link-color);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #4a90e2;
+    color: var(--link-color);
     transform: translateY(0);
 }
 
@@ -67,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1a202c;
+    color: var(--heading-color);
     line-height: 1.3;
     animation: textFadeIn 0.8s ease-out forwards;
 }
@@ -79,31 +114,31 @@ h3 { font-size: 1.75rem; }
 p {
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     animation: textFadeIn 0.8s ease-out 0.2s forwards;
     opacity: 0;
 }
 
 /* Enhanced Card style */
 .card {
-    background: #ffffff;
+    background: var(--card-bg);
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px var(--shadow-color);
     padding: 2.5rem;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
     animation: fadeIn 0.6s ease-out;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px var(--shadow-color);
 }
 
 /* Modern Links */
 .modern-link {
-    color: #4a90e2;
+    color: var(--link-color);
     text-decoration: none;
     position: relative;
     font-weight: 500;
@@ -117,7 +152,7 @@ p {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background: #4a90e2;
+    background: var(--link-color);
     transition: width 0.3s ease;
 }
 
@@ -140,26 +175,70 @@ p {
   margin-top: 1.5rem;
 }
 
+/* Resource Cards */
+
 .resource-card {
-  background: white;
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow-color);
   transition: transform 0.2s;
 }
 
 .resource-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px var(--shadow-color);
 }
 
 .resource-icon {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.5rem;
+  color: var(--link-color); /* Add this line to match your theme */
+}
+
+.resource-icon i {
+  transition: transform 0.2s ease;
+}
+
+/* Dark Mode */
+.theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+    position: absolute;
+    right: 2rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--link-color);
+    background: var(--nav-bg);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.theme-toggle i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(12deg);
 }
 
 /* List Styling */
@@ -180,6 +259,16 @@ div {
     padding: 1.5rem;
     margin: 0 auto;
     max-width: 1000px;
+    background: transparent; /* Ensure divs are transparent */
+}
+
+/* Add this to ensure the page container is transparent */
+.page-container {
+    background: transparent;
+}
+
+.home-container {
+    background: transparent;
 }
 
 /* Responsive Design */
@@ -192,6 +281,8 @@ div {
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
+        width: calc(100% - 2rem); /* Account for smaller padding */
+        text-align: center;
     }
     
     h1 { font-size: 2rem; }
@@ -204,6 +295,13 @@ div {
     
     .card {
         padding: 1.5rem;
+    }
+
+    .theme-toggle {
+        margin: 0.5rem 0;
+        margin-left: 0; /* Reset margin for mobile */
+        position: static;
+        margin: 0.5rem auto;
     }
 }
 
