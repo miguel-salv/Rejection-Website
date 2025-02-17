@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Light theme variables */
   --background: #f6f9fc;
   --text-primary: #2d3748;
   --text-secondary: #4a5568;
@@ -14,7 +13,6 @@
 }
 
 [data-theme='dark'] {
-  /* Dark theme variables */
   --background: #1a1c1e;
   --text-primary: #e2e8f0;
   --text-secondary: #a0aec0;
@@ -26,7 +24,6 @@
   --heading-color: #f7fafc;
 }
 
-/* Global Styles */
 html, body {
     background: var(--background) !important;
     min-height: 100vh;
@@ -51,11 +48,11 @@ body {
     backdrop-filter: blur(20px);
     padding: 1.2rem 2rem;
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    justify-content: center;
     gap: 2.5rem;
     box-shadow: 0 4px 20px var(--shadow-color);
-    width: calc(100% - 4rem); /* Account for padding */
+    width: calc(100% - 4rem);
     position: fixed;
     top: 0;
     left: 0;
@@ -64,6 +61,7 @@ body {
     max-width: none;
     border-bottom: 1px solid var(--shadow-color);
     animation: textFadeIn 0.6s ease-out forwards;
+    transition: transform 0.3s ease;
 }
 
 .nav-menu a {
@@ -97,7 +95,6 @@ body {
     width: 100%;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -119,7 +116,6 @@ p {
     opacity: 0;
 }
 
-/* Enhanced Card style */
 .card {
     background: var(--card-bg);
     border-radius: 16px;
@@ -136,7 +132,6 @@ p {
     box-shadow: 0 8px 30px var(--shadow-color);
 }
 
-/* Modern Links */
 .modern-link {
     color: var(--link-color);
     text-decoration: none;
@@ -175,8 +170,6 @@ p {
   margin-top: 1.5rem;
 }
 
-/* Resource Cards */
-
 .resource-card {
   background: var(--card-bg);
   padding: 1.5rem;
@@ -197,14 +190,13 @@ p {
   font-size: 2rem;
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--link-color); /* Add this line to match your theme */
+  color: var(--link-color);
 }
 
 .resource-icon i {
   transition: transform 0.2s ease;
 }
 
-/* Dark Mode */
 .theme-toggle {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -241,7 +233,14 @@ p {
     transform: rotate(12deg);
 }
 
-/* List Styling */
+.desktop-theme-toggle {
+    position: fixed;
+    top: 0rem;
+    right: 2rem;
+    display: block;
+    z-index: 1001;
+}
+
 ul {
     padding-left: 1.2rem;
 }
@@ -254,15 +253,13 @@ ul li {
     opacity: 0;
 }
 
-/* Container */
 div {
     padding: 1.5rem;
     margin: 0 auto;
     max-width: 1000px;
-    background: transparent; /* Ensure divs are transparent */
+    background: transparent;
 }
 
-/* Add this to ensure the page container is transparent */
 .page-container {
     background: transparent;
 }
@@ -271,19 +268,62 @@ div {
     background: transparent;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     body {
-        margin-top: 160px;
+        margin-top: 0;
+        margin-bottom: 60px;
     }
     
     .nav-menu {
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
-        width: calc(100% - 2rem); /* Account for smaller padding */
+        width: calc(100% - 2rem);
         text-align: center;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+        background: var(--nav-bg);
+        transform: translateY(100%);
+        max-height: 70vh;
+        overflow-y: auto;
+        border-top: 1px solid var(--border-color);
+        border-bottom: none;
+        animation: none;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.3s ease,
+                    visibility 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
     }
+
+    .nav-menu.open {
+        transform: translateY(0) !important;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu a {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.4s ease;
+    }
+
+    .nav-menu.open a {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-menu a:nth-child(1) { transition-delay: 0.1s; }
+    .nav-menu a:nth-child(2) { transition-delay: 0.15s; }
+    .nav-menu a:nth-child(3) { transition-delay: 0.2s; }
+    .nav-menu a:nth-child(4) { transition-delay: 0.25s; }
+    .nav-menu a:nth-child(5) { transition-delay: 0.3s; }
     
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
@@ -299,13 +339,100 @@ div {
 
     .theme-toggle {
         margin: 0.5rem 0;
-        margin-left: 0; /* Reset margin for mobile */
+        margin-left: 0;
         position: static;
         margin: 0.5rem auto;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .nav-menu.open {
+        transform: translateY(0) !important;
+    }
+
+    .mobile-nav-toggle {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: var(--nav-bg);
+        border: none;
+        border-top: 1px solid var(--border-color);
+        color: var(--text-primary);
+        font-size: 1rem;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        z-index: 1000;
+        transition: background-color 0.3s ease,
+                    border-color 0.3s ease,
+                    transform 0.3s ease;
+    }
+
+    .mobile-nav-toggle.open {
+        transform: translateY(-5px);
+        background: var(--card-bg);
+    }
+
+    .mobile-nav-toggle i {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-nav-toggle.open i {
+        transform: rotate(180deg);
+    }
+
+    .mobile-nav-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .close-nav-toggle {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 0.75rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .close-nav-toggle:hover {
+        transform: scale(1.1);
+        color: var(--link-color);
+        background: var(--nav-bg);
+        box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    .desktop-theme-toggle {
+        display: none;
     }
 }
 
-/* Animation for page transitions */
+@media (min-width: 1100px) {
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -321,8 +448,6 @@ div {
         transform: translateY(0);
     }
 }
-
-/* Add after your existing styles */
 
 .page-header {
   margin-bottom: 3rem;
@@ -346,7 +471,7 @@ div {
   animation: float 6s ease-in-out infinite;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .header-content {
     flex-direction: column-reverse;
     text-align: center;
@@ -358,7 +483,6 @@ div {
   }
 }
 
-/* If you don't already have the float animation */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }

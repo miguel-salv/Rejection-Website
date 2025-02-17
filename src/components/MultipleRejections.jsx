@@ -41,10 +41,6 @@ function MultipleRejections() {
           />
         </div>
       </header>
-      <h2>Gentle Advice:</h2>
-      <ul>
-        <li style={{ '--li-index': 1 }}>Consider revisiting your approach by tailoring your applications and exploring new opportunities</li>
-      </ul>
       <h2>Steps to Move Forward:</h2>
       <ul>
         <li style={{ '--li-index': 1 }}>Tailor your applications by learning from past experiences</li>
