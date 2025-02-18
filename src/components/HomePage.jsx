@@ -9,27 +9,6 @@ import growthImage from '../images/growth.svg';
 import communityImage from '../images/community.svg';
 
 function HomePage() {
-  const resources = [
-    {
-      title: "Community Support",
-      description: "Connect with others sharing similar experiences",
-      url: "https://www.reddit.com/r/careerguidance",
-      icon: <i className="fas fa-hands-helping"></i>
-    },
-    {
-      title: "Resume Improvements",
-      description: "Create or enhance your resume",
-      url: "https://www.canva.com/resumes/",
-      icon: <i className="fas fa-file-alt"></i>
-    },
-    {
-      title: "Personal Growth",
-      description: "Resources for professional development",
-      url: "https://www.mindtools.com",
-      icon: <i className="fas fa-seedling"></i>
-    }
-  ];
-
   return (
     <div className="home-container">
       <header className="home-header">
@@ -37,7 +16,7 @@ function HomePage() {
           <div className="header-text">
             <h1>Support and Guidance After Job Rejection</h1>
             <p className="header-subtitle">
-              Discover gentle support and actionable advice to help you transform setbacks into stepping stones for growth.
+              Discover support and actionable advice to help you transform setbacks into stepping stones for your future career. Made by CMU students for CMU students.
             </p>
           </div>
           <img 
@@ -57,14 +36,14 @@ function HomePage() {
               className="section-image"
             />
             <div>
-              <h2>How to Use This Support</h2>
-              <p>Explore the topics below to find the help that best suits your situation:</p>
+              <h2>How to Use This Guidance</h2>
+              <p>Explore topics tailored for college students – from internship rejections to major career transitions.</p>
             </div>
           </div>
           <div className="navigation-cards">
             <Link to="/first-rejection" className="nav-card">
-              <h3>First Job Rejection</h3>
-              <p>Getting through your first rejection experience</p>
+              <h3>First Rejection</h3>
+              <p>Understanding and bouncing back from your first rejection</p>
             </Link>
             <Link to="/dream-job-rejection" className="nav-card">
               <h3>Dream Job Rejection</h3>
@@ -72,7 +51,11 @@ function HomePage() {
             </Link>
             <Link to="/multiple-rejections" className="nav-card">
               <h3>Multiple Rejections</h3>
-              <p>Staying resilient through repeated setbacks</p>
+              <p>Staying resilient when facing multiple rejections in your college journey</p>
+            </Link>
+            <Link to="/resources" className="nav-card">
+              <h3>Resources</h3>
+              <p>Access CMU-specific career resources, interview prep, and mental well-being support</p>
             </Link>
           </div>
         </div>
@@ -84,34 +67,22 @@ function HomePage() {
             </div>
             <img 
               src={communityImage} 
-              alt="Community support illustration" 
+              alt="College community illustration" 
               className="section-image"
             />
           </div>
           <div className="tips-grid">
             {[
-              "Prioritize self-care and give yourself time to heal",
-              "Reflect on your experiences and embrace a growth mindset",
-              "Stay proactive while being gentle with yourself",
-              "Lean on friends, family, and mentors for support",
-              "Celebrate each small success along the way"
+              "Utilize your college career center for guidance",
+              "Engage in campus networking events and fairs",
+              "Request feedback after internship interviews",
+              "Build relationships with professors and alumni",
+              "Balance academics with practical career development"
             ].map((tip, index) => (
               <div key={index} className="tip-card">
                 <span className="tip-number">{index + 1}</span>
                 <p>{tip}</p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="section-block">
-          <h2>Additional Resources for Your Journey</h2>
-          <div className="resources-grid">
-            {resources.map((resource, index) => (
-              <ResourceCard
-                key={index}
-                {...resource}
-              />
             ))}
           </div>
         </div>

@@ -1,0 +1,174 @@
+.site-footer,
+.site-footer > div {
+    padding: 0 !important;
+    max-width: none !important;
+}
+
+/* Reset any inherited constraints */
+.site-footer {
+    width: 100vw !important; /* Force full viewport width */
+    margin-left: calc(-50vw + 50%) !important; /* Center the footer */
+    margin-right: calc(-50vw + 50%) !important;
+    padding: 0 !important;
+    max-width: none !important;
+    position: relative;
+}
+
+.site-footer.site-footer {
+    width: 100%;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 0 !important; /* Override the 0 padding for the footer itself */
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+/* Container for the footer content */
+.site-footer .footer-content {
+    width: 100%;
+    max-width: 1200px; /* Or your desired max-width */
+    margin: 0 auto;
+    padding: 0 2rem !important; /* Override with specific padding */
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-branding {
+    flex-shrink: 0;
+    max-width: 300px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0; /* Remove the previous margin */
+    flex-shrink: 0; /* Prevents logo from shrinking */
+    align-self: center; /* Added to ensure logo stays centered */
+}
+
+.logo-notice-wrapper {
+    display: flex;
+    align-items: center; /* Changed from flex-start to center */
+    gap: 2rem;
+    margin-bottom: 1rem;
+    width: 150%;
+}
+
+.logo-notice-wrapper > div {
+    flex: 1;
+}
+
+.notice-text-container {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    justify-content: center; /* Added */
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.student-project-notice {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0; /* Remove the previous margin */
+    max-width: none; /* Remove max-width constraint */
+    line-height: 1.6;
+    flex: 1;
+    margin: 0 0 1rem 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.footer-section h4 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--link-color);
+}
+
+.footer-section address {
+    font-style: normal;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.footer-section address p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .footer-branding {
+    margin-bottom: 2rem;
+    }
+
+    .footer-links {
+    justify-content: center;
+    gap: 2rem;
+    }
+
+    .footer-section {
+    flex-basis: 100%;
+    text-align: center;
+    }
+
+    .student-project-notice {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 1rem auto;
+    }
+
+    .logo-notice-wrapper {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .footer-logo {
+        margin-bottom: 1rem;
+    }
+
+    .logo-notice-wrapper > div {
+        text-align: center;
+    }
+
+    .notice-text-container {
+        text-align: center;
+    }
+}

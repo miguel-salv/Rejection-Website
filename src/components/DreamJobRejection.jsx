@@ -3,27 +3,6 @@ import ResourceCard from './shared/ResourceCard';
 import dreamJobImage from '../images/dream-job.svg';
 
 function DreamJobRejection() {
-  const resources = [
-    {
-      title: "Career Pivoting",
-      description: "Explore alternative career paths",
-      url: "https://www.themuse.com/advice/career-pivot",
-      icon: <i className="fas fa-sync-alt"></i>
-    },
-    {
-      title: "Mindfulness Resources",
-      description: "Tools for emotional well-being",
-      url: "https://www.mindful.org",
-      icon: <i className="fas fa-spa"></i>
-    },
-    {
-      title: "Networking Guide",
-      description: "Build meaningful professional connections",
-      url: "https://www.linkedin.com/learning",
-      icon: <i className="fas fa-network-wired"></i>
-    }
-  ];
-
   return (
     <div className="page-container">
       <header className="page-header">
@@ -47,18 +26,6 @@ function DreamJobRejection() {
         <li style={{ '--li-index': 2 }}>Consider reapplying or exploring organizations with similar missions</li>
         <li style={{ '--li-index': 3 }}>Stay open to new opportunities and career pivots</li>
       </ul>
-      
-      <section className="resources-section">
-        <h2>Helpful Resources</h2>
-        <div className="resources-grid">
-          {resources.map((resource, index) => (
-            <ResourceCard 
-              key={index}
-              {...resource}
-            />
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

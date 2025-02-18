@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.resource-card {
+    display: block; /* Make the link full-width */
+    text-decoration: none; /* Remove default link underline */
+    cursor: pointer;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px var(--shadow-color);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px var(--shadow-color);
+    border-color: var(--link-color);
+}
+
+/* Add a subtle indicator that it's clickable */
+.resource-card::after {
+    content: '↗';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: var(--link-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.resource-card:hover::after {
+    opacity: 1;
+}
+
+.resource-card h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    background: var(--heading-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resource-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0 0;
+    font-weight: 500;
+}
+
+.resource-card h3 i {
+    color: var(--link-color);
+    margin-right: 0.5rem;
+}
+
+/* Update the link icon hover state if needed */
+.resource-card:hover h3 i {
+    color: var(--link-color); /* Ensures color stays consistent on hover */
+}
+
+/* Resource Content */
+.resource-content {
+    padding: 2rem 1.5rem;
+    animation: fadeIn 0.6s ease-out;
+    margin-bottom: 11rem;
+    position: relative; /* For the divider */
+}
+
+.resource-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}   
+
+.resource-content ol {
+    counter-reset: resource-steps;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-content ol > li {
+    counter-increment: resource-steps;
+    list-style: none;
+    position: relative;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.resource-content ol > li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.resource-content ol > li::before {
+    content: counter(resource-steps);
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(120deg, #6B63FF, #4338ca);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.resource-content strong {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+.resource-content ul {
+    margin: 0;
+    padding-left: 1rem;
+    list-style: none; /* Remove default bullets */
+}
+
+.resource-content ul li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    list-style-type: none; /* Ensure no bullets */
+}
+
+.resource-content ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #6B63FF;
+    font-weight: 600;
+}
+
+/* Add this after the .resource-content styles */
+
+.resource-content::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--link-color),
+        transparent
+    );
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+}
+
+/* Remove margin-bottom from the last resource-content */
+.resource-content:last-child {
+    margin-bottom: 0;
+}
+
+.resource-content:last-child::after {
+    display: none;
+}
+
+.resources-layout {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.resources-nav {
+  position: fixed;
+  left: 0.5rem;
+  top: 8rem;
+  width: 220px;
+  height: fit-content;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--link-color);
+  transition: height 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--heading-color);
+  padding-left: 1.25rem;
+}
+
+.nav-item:hover::before {
+  height: 100%;
+}
+
+/* Hide navigation on smaller screens */
+@media (max-width: 1400px) {
+  .resources-nav {
+    display: none;
+  }
+  
+  .page-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Add active state for current section */
+.nav-item.active {
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+.nav-item.active::before {
+  height: 100%;
+}
+
+/* Update existing container styles */
+.page-container {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Add these styles at the end of your CSS file */
+
+.mobile-nav-arrows {
+  display: none; /* Hidden by default */
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.mobile-nav-arrow {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-arrow:hover {
+  transform: scale(1.1);
+  color: var(--link-color);
+  background: var(--nav-bg);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.mobile-nav-arrow i {
+  font-size: 1rem;
+}
+
+/* Update the media query to show arrows on mobile */
+@media (max-width: 1400px) {
+  .resources-nav {
+    display: none;
+  }
+  
+  .mobile-nav-arrows {
+    display: flex;
+  }
+  
+  .page-container {
+    padding: 0 1rem;
+  }
+}
