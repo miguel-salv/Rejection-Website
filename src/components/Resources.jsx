@@ -127,14 +127,14 @@ function Resources() {
               <li style={{ '--li-index': 1 }}>
                 <strong>Review Resume & Cover Letter Guidelines:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Click on the "Resume and Cover Letters" section.</li>
+                  <li style={{ '--li-index': 1 }}>Click on the <b>Resume and Cover Letters</b> section.</li>
                   <li style={{ '--li-index': 2 }}>Read through CMU's recommendations on formatting, structure, and common mistakes.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 2 }}>
                 <strong>Download Resume Templates:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Navigate to the "Sample Resumes & Templates" section.</li>
+                  <li style={{ '--li-index': 1 }}>Navigate to the <b>Sample Resumes & Templates</b> section.</li>
                   <li style={{ '--li-index': 2 }}>Choose a template that matches your industry or experience level.</li>
                 </ul>
               </li>
@@ -142,15 +142,15 @@ function Resources() {
                 <strong>Use Resume Review Services:</strong>
                 <ul>
                   <li style={{ '--li-index': 1 }}>Use the VMock system to automatically scan your resume for initial quality checking.</li>
-                  <li style={{ '--li-index': 2 }}>Check for available resume review appointments through the CMU Career Center.</li>
-                  <li style={{ '--li-index': 3 }}>Consider attending workshops or drop-in advising sessions for feedback.</li>
+                  <li style={{ '--li-index': 2 }}>Check for available <b>resume review appointments</b> through the CMU Career Center.</li>
+                  <li style={{ '--li-index': 3 }}>Consider attending <b>workshops</b> or <b>drop-in advising sessions</b> for feedback.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 4 }}>
                 <strong>Refine & Submit Your Resume:</strong>
                 <ul>
                   <li style={{ '--li-index': 1 }}>Make necessary edits based on CMU's guidelines.</li>
-                  <li style={{ '--li-index': 2 }}>Submit your resume for review if possible, or compare it to CMU's resume samples to ensure quality.</li>
+                  <li style={{ '--li-index': 2 }}>Submit your resume for review if possible, or compare it to CMU's <b>resume samples</b> to ensure quality.</li>
                 </ul>
               </li>
             </ol>
@@ -168,29 +168,29 @@ function Resources() {
               <li style={{ '--li-index': 1 }}>
                 <strong>Find Your College's Career Resources:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Scroll down to find your specific CMU College or Department.</li>
+                  <li style={{ '--li-index': 1 }}>Scroll down to find your specific <b>CMU College or Department</b>.</li>
                   <li style={{ '--li-index': 2 }}>Click on your college's link to view specialized career resources.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 2 }}>
                 <strong>Explore Industry-Specific Advice:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Look for resume samples, job search strategies, and networking opportunities tailored to your field.</li>
-                  <li style={{ '--li-index': 2 }}>Identify faculty mentors, industry partners, or alumni connections recommended for your major.</li>
+                  <li style={{ '--li-index': 1 }}>Look for <b>resume samples</b>, <b>job search strategies</b>, and <b>networking opportunities</b> tailored to your field.</li>
+                  <li style={{ '--li-index': 2 }}>Identify <b>faculty mentors</b>, <b>industry partners</b>, or <b>alumni connections</b> recommended for your major.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 3 }}>
                 <strong>Check for Career Events & Networking Opportunities:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Look for career fairs, networking nights, or employer connections.</li>
-                  <li style={{ '--li-index': 2 }}>Use industry-specific job boards to find targeted opportunities.</li>
+                  <li style={{ '--li-index': 1 }}>Look for <b>career fairs</b>, <b>networking nights</b>, or <b>employer connections</b>.</li>
+                  <li style={{ '--li-index': 2 }}>Use <b>industry-specific job boards</b> to find targeted opportunities.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 4 }}>
                 <strong>Use Internship & Job Search Tools:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Access Handshake, internship postings, and company partnerships.</li>
-                  <li style={{ '--li-index': 2 }}>Apply for internships, co-ops, or research positions relevant to your major.</li>
+                  <li style={{ '--li-index': 1 }}>Access <b>Handshake</b>, <b>internship postings</b>, and <b>company partnerships</b>.</li>
+                  <li style={{ '--li-index': 2 }}>Apply for <b>internships</b>, <b>co-ops</b>, or <b>research positions</b> relevant to your major.</li>
                 </ul>
               </li>
             </ol>
@@ -208,28 +208,28 @@ function Resources() {
               <li style={{ '--li-index': 1 }}>
                 <strong>Search for Common Career Questions:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Use the search bar to look up specific topics (e.g., "interview tips," "career change advice," "entry-level jobs").</li>
-                  <li style={{ '--li-index': 2 }}>Read top upvoted posts to find helpful discussions.</li>
+                  <li style={{ '--li-index': 1 }}>Use the <b>search bar</b> to look up specific topics (e.g., "interview tips," "career change advice," "entry-level jobs").</li>
+                  <li style={{ '--li-index': 2 }}>Read <b>top upvoted posts</b> to find helpful discussions.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 2 }}>
                 <strong>Ask Questions & Get Community Input:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Click "Create a Post" to ask for advice on resumes, job applications, or career transitions.</li>
-                  <li style={{ '--li-index': 2 }}>Be specific in your question (e.g., "How can I improve my software engineering resume?") for better responses.</li>
+                  <li style={{ '--li-index': 1 }}>Click <b>Create a Post</b> to ask for advice on resumes, job applications, or career transitions.</li>
+                  <li style={{ '--li-index': 2 }}>Be <b>specific</b> in your question (e.g., "How can I improve my software engineering resume?") for better responses.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 3 }}>
                 <strong>Engage with Industry Professionals:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Many professionals and recruiters share insights—look for "Hiring Managers" or experienced users responding to posts.</li>
+                  <li style={{ '--li-index': 1 }}>Many professionals and recruiters share insights—look for <b>"Hiring Managers"</b> or <b>experienced users</b> responding to posts.</li>
                   <li style={{ '--li-index': 2 }}>If a response is particularly helpful, follow up with additional questions.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 4 }}>
                 <strong>Be Mindful of Advice Quality:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Since Reddit is an open forum, verify advice with official career websites or CMU resources before acting on it.</li>
+                  <li style={{ '--li-index': 1 }}>Since Reddit is an open forum, verify advice with <b>official career websites</b> or <b>CMU resources</b> before acting on it.</li>
                   <li style={{ '--li-index': 2 }}>Cross-check information with CMU's career center if unsure.</li>
                 </ul>
               </li>
@@ -248,28 +248,28 @@ function Resources() {
               <li style={{ '--li-index': 1 }}>
                 <strong>Schedule a Career Counseling Session:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Use the appointment booking system to schedule one-on-one career advising.</li>
+                  <li style={{ '--li-index': 1 }}>Use the <b>appointment booking system</b> to schedule one-on-one career advising.</li>
                   <li style={{ '--li-index': 2 }}>Choose between resume reviews, interview prep, or general career guidance.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 2 }}>
                 <strong>Practice for Interviews:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Explore mock interview sessions available through CMU's career services.</li>
+                  <li style={{ '--li-index': 1 }}>Explore <b>mock interview sessions</b> available through CMU's career services.</li>
                   <li style={{ '--li-index': 2 }}>Review common interview questions and strategies listed on the site.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 3 }}>
                 <strong>Attend Career Development Events:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Look for career fairs, employer talks, and networking sessions.</li>
-                  <li style={{ '--li-index': 2 }}>Register for industry-specific webinars to stay updated on hiring trends.</li>
+                  <li style={{ '--li-index': 1 }}>Look for <b>career fairs</b>, <b>employer talks</b>, and <b>networking sessions</b>.</li>
+                  <li style={{ '--li-index': 2 }}>Register for <b>industry-specific webinars</b> to stay updated on hiring trends.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 4 }}>
                 <strong>Leverage Alumni & Employer Connections:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Use the INI's network to find mentors, internship opportunities, and job leads.</li>
+                  <li style={{ '--li-index': 1 }}>Use the <b>INI's network</b> to find mentors, internship opportunities, and job leads.</li>
                 </ul>
               </li>
             </ol>
@@ -287,22 +287,22 @@ function Resources() {
               <li style={{ '--li-index': 1 }}>
                 <strong>Explore Therapy & Counseling Options:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Review available therapy services, including individual counseling and group sessions.</li>
-                  <li style={{ '--li-index': 2 }}>Identify whether you need in-person or virtual sessions based on availability.</li>
+                  <li style={{ '--li-index': 1 }}>Review available <b>therapy services</b>, including <b>individual counseling</b> and <b>group sessions</b>.</li>
+                  <li style={{ '--li-index': 2 }}>Identify whether you need <b>in-person or virtual sessions</b> based on availability.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 2 }}>
                 <strong>Utilize Mindfulness & Stress-Relief Tools:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>Access CMU's guided meditation resources, stress-reduction exercises, and mental health workshops.</li>
-                  <li style={{ '--li-index': 2 }}>Consider attending mindfulness sessions or wellness events to develop relaxation techniques.</li>
+                  <li style={{ '--li-index': 1 }}>Access CMU's <b>guided meditation resources</b>, <b>stress-reduction exercises</b>, and <b>mental health workshops</b>.</li>
+                  <li style={{ '--li-index': 2 }}>Consider attending <b>mindfulness sessions</b> or <b>wellness events</b> to develop relaxation techniques.</li>
                 </ul>
               </li>
               <li style={{ '--li-index': 3 }}>
                 <strong>Find Immediate Support If Needed:</strong>
                 <ul>
-                  <li style={{ '--li-index': 1 }}>If experiencing high stress, anxiety, or depression, use CMU's crisis support options listed on the site.</li>
-                  <li style={{ '--li-index': 2 }}>Contact CMU's mental health professionals for direct assistance.</li>
+                  <li style={{ '--li-index': 1 }}>If experiencing high stress, anxiety, or depression, use CMU's <b>crisis support options</b> listed on the site.</li>
+                  <li style={{ '--li-index': 2 }}>Contact CMU's <b>mental health professionals</b> for direct assistance.</li>
                 </ul>
               </li>
             </ol>

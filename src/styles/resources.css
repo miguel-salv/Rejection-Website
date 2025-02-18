@@ -130,6 +130,11 @@
     list-style: none; /* Remove default bullets */
 }
 
+.resource-content b {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 .resource-content ul li {
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
