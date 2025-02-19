@@ -66,6 +66,7 @@ function App() {
           </Routes>
         </main>
       </HashRouter>
+      <Footer />
     </div>
   );
 }

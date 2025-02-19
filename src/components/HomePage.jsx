@@ -1,7 +1,6 @@
 // src/HomePage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ResourceCard from './shared/ResourceCard';
 import '../styles/home.css';
 // Import your images
 import supportImage from '../images/support.svg';
@@ -26,6 +25,17 @@ function HomePage() {
           />
         </div>
       </header>
+
+      <div className="special-notices">
+        <div className="notice-card">
+          <h3><i className="fas fa-exclamation-circle"></i> Important Notice</h3>
+          <p>If you are a member of a marginalized group or community, certain systemic factors can influence the likelihood of job rejection. These can be absolutely overcome but will require extra effort.</p>
+        </div>
+        <div className="notice-card">
+          <h3><i className="fas fa-globe"></i> International Students</h3>
+          <p>If you are not a citizen of the United States, it will be particularly difficult to get a visa sponsored for your first job, which may lead to a higher rejection rate than average.</p>
+        </div>
+      </div>
 
       <section className="main-content">
         <div className="section-block">

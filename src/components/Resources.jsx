@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import '../styles/resources.css';
 
 function Resources() {
@@ -10,13 +10,13 @@ function Resources() {
     wellbeing: "https://www.cmu.edu/wellbeing/resources/therapy.html"
   };
 
-  const resources = [
+  const resources = useMemo(() => [
     { id: 'resume', title: 'Resume Help' },
     { id: 'college', title: 'CMU Career Resources' },
     { id: 'reddit', title: 'Career Guidance' },
     { id: 'interview', title: 'Interview Prep' },
     { id: 'wellbeing', title: 'Mental Well-being' }
-  ];
+  ], []);
 
   const scrollToResource = (id) => {
     const element = document.getElementById(id);

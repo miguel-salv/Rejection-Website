@@ -1,5 +1,4 @@
 import React from 'react';
-import ResourceCard from './shared/ResourceCard';
 import multipleRejectionsImage from '../images/multiple-rejections.svg';
 
 function MultipleRejections() {

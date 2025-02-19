@@ -1,5 +1,4 @@
 import React from 'react';
-import ResourceCard from './shared/ResourceCard';
 import firstRejectionImage from '../images/first-rejection.svg';
 
 function FirstRejection() {

@@ -53,7 +53,6 @@
   border-color: var(--link-color);
 }
 
-/* Add a subtle indicator that it's clickable */
 .nav-card::after {
   position: absolute;
   top: 1rem;
@@ -154,7 +153,6 @@
   z-index: 2;
 }
 
-/* Add a floating animation for images */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -202,13 +200,68 @@
   }
 }
 
-/* Add subtle glow effect for dark mode */
+.special-notices {
+  max-width: 1200px;
+  margin: 2rem auto 3rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.notice-card {
+  background: var(--notice-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  animation: fadeIn 0.6s ease-out;
+  margin-bottom: 1;
+}
+
+.notice-card:last-child {
+  margin-bottom: 0;
+}
+
+.notice-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--heading-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.notice-card h3 i {
+  color: var(--link-color);
+}
+
+.notice-card p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .special-notices {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .notice-card {
+    padding: 1.25rem;
+  }
+}
+
 [data-theme='dark'] .header-image,
 [data-theme='dark'] .section-image {
   filter: drop-shadow(0 0 15px rgba(107, 99, 255, 0.1));
 }
 
-/* Add subtle background glow */
 .header-content::after, .section-header::after {
   content: '';
   position: absolute;
@@ -223,13 +276,11 @@
   z-index: 1;
 }
 
-/* Adjust the glow for dark mode */
 [data-theme='dark'] .header-content::after,
 [data-theme='dark'] .section-header::after {
   opacity: 0.05;
 }
 
-/* Ensure smooth transitions */
 .header-image, .section-image,
 .header-content::after, .section-header::after {
   transition: all 0.3s ease;

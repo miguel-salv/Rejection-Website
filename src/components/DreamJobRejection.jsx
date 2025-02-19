@@ -1,5 +1,4 @@
 import React from 'react';
-import ResourceCard from './shared/ResourceCard';
 import dreamJobImage from '../images/dream-job.svg';
 
 function DreamJobRejection() {

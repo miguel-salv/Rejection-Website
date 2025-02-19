@@ -17,26 +17,22 @@
 .site-footer.site-footer {
     width: 100%;
     background: var(--nav-bg);
-    border-top: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px var(--shadow-color);
     padding: 1rem 0 !important; /* Override the 0 padding for the footer itself */
     flex-shrink: 0;
-    z-index: 1000;
+    z-index: 998;
 }
 
 /* Container for the footer content */
 .site-footer .footer-content {
-    width: 100%;
-    max-width: 1200px; /* Or your desired max-width */
-    margin: 0 auto;
-    padding: 0 2rem !important; /* Override with specific padding */
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.footer-branding {
-    flex-shrink: 0;
-    max-width: 300px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    transform: translateX(-1.3rem);
 }
 
 .footer-logo {
@@ -47,24 +43,8 @@
     align-self: center; /* Added to ensure logo stays centered */
 }
 
-.logo-notice-wrapper {
-    display: flex;
-    align-items: center; /* Changed from flex-start to center */
-    gap: 2rem;
-    margin-bottom: 1rem;
-    width: 150%;
-}
-
-.logo-notice-wrapper > div {
+.site.footer > div {
     flex: 1;
-}
-
-.notice-text-container {
-    flex: 1;
-    min-width: 0; /* Prevents flex item from overflowing */
-    display: flex; /* Added */
-    flex-direction: column; /* Added */
-    justify-content: center; /* Added */
 }
 
 .copyright {
@@ -72,14 +52,16 @@
     font-size: 0.9rem;
     margin: 0;
     margin-top: 0.5rem;
+    opacity: 0.8;
 }
 
 .student-project-notice {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 0; /* Remove the previous margin */
-    max-width: none; /* Remove max-width constraint */
+    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+    max-width: none; /* Remove max-width constraint */
     flex: 1;
     margin: 0 0 1rem 0;
 }
@@ -93,7 +75,20 @@
 .footer-section h4 {
     color: var(--heading-color);
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background: var(--link-color);
+    opacity: 0.7;
 }
 
 .footer-section ul {
@@ -103,17 +98,34 @@
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-section a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .footer-section a:hover {
     color: var(--link-color);
+    transform: translateX(4px);
+}
+
+.footer-section a::before {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.footer-section a:hover::before {
+    opacity: 1;
+    transform: translateX(-4px);
 }
 
 .footer-section address {
@@ -127,48 +139,89 @@
     font-size: 0.9rem;
 }
 
+.notice-text-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.footer-section {
+    flex-shrink: 0;
+    padding-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
-    .footer-content {
-    flex-direction: column;
-    text-align: center;
+    .site-footer {
+        padding: 2rem 0 !important;
+        margin-top: 2rem;
     }
 
-    .footer-branding {
-    margin-bottom: 2rem;
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+        text-align: center;
     }
 
     .footer-links {
-    justify-content: center;
-    gap: 2rem;
+        justify-content: center;
+        gap: 2rem;
     }
 
     .footer-section {
-    flex-basis: 100%;
-    text-align: center;
+        flex-basis: 100%;
+        text-align: center;
     }
 
     .student-project-notice {
         max-width: 100%;
         text-align: center;
         margin: 0 auto 1rem auto;
-    }
-
-    .logo-notice-wrapper {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        gap: 1rem;
+        padding-right: 0;
     }
     
     .footer-logo {
         margin-bottom: 1rem;
     }
 
-    .logo-notice-wrapper > div {
+    .notice-text-container {
         text-align: center;
+        max-width: 100%;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-section a {
+        justify-content: center;
+    }
+
+    .footer-section a:hover {
+        transform: translateX(0);
+    }
+
+    .footer-section a::before {
+        display: none;
+    }
+
+    .site-footer .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1.5rem;
     }
 
     .notice-text-container {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .footer-section {
+        order: 2;
+        width: 100%;
         text-align: center;
     }
 }
