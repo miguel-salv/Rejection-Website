@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .resource-card {
-    display: block; /* Make the link full-width */
-    text-decoration: none; /* Remove default link underline */
+    display: block; 
+    text-decoration: none; 
     cursor: pointer;
     background: var(--card-bg);
     border-radius: 16px;
@@ -20,7 +20,6 @@
     border-color: var(--link-color);
 }
 
-/* Add a subtle indicator that it's clickable */
 .resource-card::after {
     content: '↗';
     position: absolute;
@@ -56,17 +55,15 @@
     margin-right: 0.5rem;
 }
 
-/* Update the link icon hover state if needed */
 .resource-card:hover h3 i {
-    color: var(--link-color); /* Ensures color stays consistent on hover */
+    color: var(--link-color);
 }
 
-/* Resource Content */
 .resource-content {
     padding: 2rem 1.5rem;
     animation: fadeIn 0.6s ease-out;
     margin-bottom: 11rem;
-    position: relative; /* For the divider */
+    position: relative;
 }
 
 .resource-content p {
@@ -127,7 +124,7 @@
 .resource-content ul {
     margin: 0;
     padding-left: 1rem;
-    list-style: none; /* Remove default bullets */
+    list-style: none;
 }
 
 .resource-content b {
@@ -140,7 +137,7 @@
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
-    list-style-type: none; /* Ensure no bullets */
+    list-style-type: none;
 }
 
 .resource-content ul li::before {
@@ -151,25 +148,17 @@
     font-weight: 600;
 }
 
-/* Add this after the .resource-content styles */
-
 .resource-content::after {
     content: '';
     display: block;
     width: 100%;
     height: 3px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--link-color),
-        transparent
-    );
+    background: linear-gradient(to right, transparent, var(--link-color), transparent);
     position: absolute;
     bottom: -4rem;
     left: 0;
 }
 
-/* Remove margin-bottom from the last resource-content */
 .resource-content:last-child {
     margin-bottom: 0;
 }
@@ -233,18 +222,6 @@
   height: 100%;
 }
 
-/* Hide navigation on smaller screens */
-@media (max-width: 1400px) {
-  .resources-nav {
-    display: none;
-  }
-  
-  .page-container {
-    padding: 0 1rem;
-  }
-}
-
-/* Add active state for current section */
 .nav-item.active {
   color: var(--heading-color);
   font-weight: 500;
@@ -254,16 +231,13 @@
   height: 100%;
 }
 
-/* Update existing container styles */
 .page-container {
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
-/* Add these styles at the end of your CSS file */
-
 .mobile-nav-arrows {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   right: 1rem;
   top: 50%;
@@ -299,7 +273,6 @@
   font-size: 1rem;
 }
 
-/* Update the media query to show arrows on mobile */
 @media (max-width: 1400px) {
   .resources-nav {
     display: none;
@@ -310,6 +283,29 @@
   }
   
   .page-container {
-    padding: 0 1rem;
+    padding: 0 0rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .resources-nav {
+    display: none;
+  }
+  
+  .mobile-nav-arrows {
+    display: flex;
+    padding: 0 0rem;
+  }
+
+  .resource-card {
+    padding: 1.25rem 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .resource-content {
+    padding: 1.5rem 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }

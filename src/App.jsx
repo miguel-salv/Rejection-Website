@@ -21,12 +21,10 @@ function App() {
     <div className="app-container">
       <HashRouter>
         <ScrollToTop />
-        {/* Desktop dark mode toggle */}
         <div className="desktop-theme-toggle">
           <DarkModeToggle />
         </div>
 
-        {/* Mobile open-menu button */}
         {!isNavOpen && (
           <button 
             className="mobile-nav-toggle"
@@ -42,7 +40,6 @@ function App() {
           <Link to="/dream-job-rejection" onClick={() => setIsNavOpen(false)}>Dream Job Rejection</Link>
           <Link to="/multiple-rejections" onClick={() => setIsNavOpen(false)}>Multiple Rejections</Link>
           <Link to="/resources" onClick={() => setIsNavOpen(false)}>Resources</Link>
-          {/* Mobile controls: dark mode toggle + close button */}
           {isNavOpen && (
             <div className="mobile-nav-controls">
               <DarkModeToggle />

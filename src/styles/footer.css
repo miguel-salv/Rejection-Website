@@ -4,10 +4,9 @@
     max-width: none !important;
 }
 
-/* Reset any inherited constraints */
 .site-footer {
-    width: 100vw !important; /* Force full viewport width */
-    margin-left: calc(-50vw + 50%) !important; /* Center the footer */
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
     padding: 0 !important;
     max-width: none !important;
@@ -18,12 +17,11 @@
     width: 100%;
     background: var(--nav-bg);
     box-shadow: 0 4px 20px var(--shadow-color);
-    padding: 1rem 0 !important; /* Override the 0 padding for the footer itself */
+    padding: 1rem 0 !important;
     flex-shrink: 0;
     z-index: 998;
 }
 
-/* Container for the footer content */
 .site-footer .footer-content {
     max-width: 1200px;
     margin: 2rem auto;
@@ -38,9 +36,9 @@
 .footer-logo {
     width: 100px;
     height: auto;
-    margin-bottom: 0; /* Remove the previous margin */
-    flex-shrink: 0; /* Prevents logo from shrinking */
-    align-self: center; /* Added to ensure logo stays centered */
+    margin-bottom: 0;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .site.footer > div {
@@ -61,7 +59,7 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
     padding-right: 2rem;
-    max-width: none; /* Remove max-width constraint */
+    max-width: none;
     flex: 1;
     margin: 0 0 1rem 0;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/footer.css';
-import studentProjectLogo from '../../images/cmu_logo.png';
 
 function Footer() {
   return (

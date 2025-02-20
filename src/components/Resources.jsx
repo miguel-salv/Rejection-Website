@@ -32,11 +32,10 @@ function Resources() {
     }
   };
 
-  // Optional: Add scroll spy to highlight current section
   useEffect(() => {
     const handleScroll = () => {
       const sections = resources.map(r => document.getElementById(r.id));
-      const scrollPosition = window.scrollY + 200; // Offset for highlighting
+      const scrollPosition = window.scrollY + 200;
 
       sections.forEach(section => {
         if (section) {
@@ -63,7 +62,6 @@ function Resources() {
     const scrollPosition = window.scrollY + 200;
     let currentIndex = -1;
 
-    // Find current section
     sections.forEach((section, index) => {
       if (section) {
         const sectionTop = section.offsetTop;
@@ -74,10 +72,8 @@ function Resources() {
       }
     });
 
-    // Calculate target index
     let targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
     
-    // Ensure target index is within bounds
     if (targetIndex >= 0 && targetIndex < sections.length) {
       scrollToResource(resources[targetIndex].id);
     }
