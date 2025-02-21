@@ -43,7 +43,12 @@
   box-shadow: 0 4px 6px var(--shadow-color);
   text-decoration: none;
   color: var(--text-primary);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
   border: 1px solid var(--border-color);
 }
 
@@ -60,8 +65,9 @@
   font-size: 1.2rem;
   color: var(--link-color);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 
 .nav-card:hover::after {
   opacity: 1;
@@ -205,8 +211,22 @@
   margin: 2rem auto 3rem;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .special-notices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .special-notices {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 }
 
 .notice-card {
@@ -214,7 +234,7 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
-  box-shadow: 0 4px 6px var(--shadow-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
   animation: fadeIn 0.6s ease-out;
   margin-bottom: 1;
 }
@@ -228,21 +248,24 @@
   align-items: center;
   gap: 0.75rem;
   color: var(--heading-color);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 .notice-card h3 i {
   color: var(--link-color);
+  opacity: 0.7;
 }
 
 .notice-card p {
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  line-height: 1.;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
@@ -284,4 +307,25 @@
 .header-image, .section-image,
 .header-content::after, .section-header::after {
   transition: all 0.3s ease;
+}
+
+/* Added home page specific styles */
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.header-text {
+  flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .header-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .header-image {
+    width: 200px;
+    margin-bottom: 1.5rem;
+  }
 }
