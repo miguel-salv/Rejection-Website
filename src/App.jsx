@@ -3,13 +3,38 @@ import { HashRouter, Route, Routes, Link } from 'react-router-dom';
 import FirstRejection from './components/FirstRejection';
 import DreamJobRejection from './components/DreamJobRejection';
 import MultipleRejections from './components/MultipleRejections';
-import HomePage from './components/HomePage';
 import DarkModeToggle from './components/shared/DarkModeToggle';
 import ScrollToTop from './components/shared/ScrollToTop';
-import Resources from './components/Resources';
 import Footer from './components/shared/Footer';
-import ScrollProgress from './components/shared/ScrollProgress';
 import './styles/main.css';
+
+// Implement code splitting
+const HomePage = React.lazy(() => import('./components/HomePage'));
+const Resources = React.lazy(() => import('./components/Resources'));
+
+// Add error boundaries
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("ErrorBoundary caught an error", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children; 
+  }
+}
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -55,13 +80,15 @@ function App() {
           )}
         </div>
         <main style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/first-rejection" element={<FirstRejection />} />
-            <Route path="/dream-job-rejection" element={<DreamJobRejection />} />
-            <Route path="/multiple-rejections" element={<MultipleRejections />} />
-            <Route path="/resources" element={<Resources />} />
-          </Routes>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/first-rejection" element={<FirstRejection />} />
+              <Route path="/dream-job-rejection" element={<DreamJobRejection />} />
+              <Route path="/multiple-rejections" element={<MultipleRejections />} />
+              <Route path="/resources" element={<Resources />} />
+            </Routes>
+          </ErrorBoundary>
         </main>
       </HashRouter>
       <Footer />

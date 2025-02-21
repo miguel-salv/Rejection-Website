@@ -13,7 +13,7 @@ function HomePage() {
       <header className="home-header">
         <div className="header-content">
           <div className="header-text">
-            <h1>Support and Guidance After Job Rejection</h1>
+            <h1>A Guide to Navigating Job Rejections</h1>
             <p className="header-subtitle">
               Discover support and actionable advice to help you transform setbacks into stepping stones for your future career. Made by CMU students for CMU students.
             </p>
@@ -50,7 +50,7 @@ function HomePage() {
               className="section-image"
             />
             <div>
-              <h2>How to Use This Guidance</h2>
+              <h2>How to Use This Guide</h2>
               <p>Explore topics tailored for college students – from internship rejections to major career transitions.</p>
             </div>
           </div>

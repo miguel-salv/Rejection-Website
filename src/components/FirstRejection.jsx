@@ -19,11 +19,28 @@ function FirstRejection() {
           />
         </div>
       </header>
-      <h2>Simple Next Steps:</h2>
+      <h2>Key Steps for Growth:</h2>
       <ul>
-        <li style={{ '--li-index': 1 }}>Consider asking for constructive feedback</li>
-        <li style={{ '--li-index': 2 }}>Think about refining your resume</li>
-        <li style={{ '--li-index': 3 }}>Reflect on your interview performance</li>
+        <li style={{ '--li-index': 1 }}>
+          <strong>Gather Comprehensive Feedback</strong>
+          <p>Request feedback for each stage of the hiring process to understand areas for improvement.</p>
+        </li>
+        <li style={{ '--li-index': 2 }}>
+          <strong>Evaluate Your Resume</strong>
+          <p>Your resume is your first impression. Ensure it's comprehensive yet concise, highlighting your key achievements and skills.</p>
+        </li>
+        <li style={{ '--li-index': 3 }}>
+          <strong>Review Interview Performance</strong>
+          <p>If you're getting interviews but not offers, focus on improving your interview skills and presentation.</p>
+        </li>
+        <li style={{ '--li-index': 4 }}>
+          <strong>Maintain a Growth Mindset</strong>
+          <p>Remember that rejection is a universal experience. Use it as a learning opportunity rather than a setback.</p>
+        </li>
+        <li style={{ '--li-index': 5 }}>
+          <strong>Manage Rejection Sensitivity</strong>
+          <p>Don't let fear of rejection hold you back. Each application is a new opportunity, independent of past outcomes.</p>
+        </li>
       </ul>
     </div>
   );
