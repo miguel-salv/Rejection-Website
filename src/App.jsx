@@ -8,6 +8,7 @@ import DarkModeToggle from './components/shared/DarkModeToggle';
 import ScrollToTop from './components/shared/ScrollToTop';
 import Resources from './components/Resources';
 import Footer from './components/shared/Footer';
+import ScrollProgress from './components/shared/ScrollProgress';
 import './styles/main.css';
 
 function App() {
