@@ -9,7 +9,10 @@ function MultipleRejections() {
           <div className="header-text">
             <h1>Facing Multiple Rejections? Build Your Resilience</h1>
             <p>
-              It's not uncommon for college students to encounter multiple rejections, especially during the competitive internship or entry-level job search. After sending out countless applications and attending interviews, it's easy to feel disheartened. However, persistence and adaptability are crucial skills that will serve you throughout your career. Every rejection is a stepping stone toward finding the right opportunity that aligns with your goals.
+              It's not uncommon for college students to encounter multiple rejections, especially during the competitive internship or entry-level job search. After sending out countless applications and attending interviews, it's easy to feel disheartened.
+            </p>
+            <p>
+            However, persistence and adaptability are crucial skills that will serve you throughout your career. Every rejection is a stepping stone toward finding the right opportunity that aligns with your goals.
             </p>
           </div>
           <img 
@@ -24,46 +27,46 @@ function MultipleRejections() {
         <li style={{ '--li-index': 1 }}>
           <strong>Refine Your Application Strategy</strong>
           <p>
-            Instead of applying to every position that remotely matches your skills, focus on quality over quantity. Tailor each resume and cover letter to the specific job description. Highlight key achievements from internships, projects, or leadership roles that demonstrate your qualifications.
+            Focus on quality over quantity in your applications. Take time to tailor each resume and cover letter to highlight relevant achievements and skills that match the position's requirements.
           </p>
           <p>
-            Take time to research the companies and ensure that your application reflects your understanding of their values, mission, and current needs.
+            Research each company thoroughly to ensure your application aligns with their values and demonstrates your genuine interest in the role.
           </p>
         </li>
         <li style={{ '--li-index': 2 }}>
-          <strong>Seek Feedback from Rejections</strong>
+          <strong>Seek Constructive Feedback</strong>
           <p>
-            After an interview, don't hesitate to ask for constructive feedback. Learning what went wrong—or what could be improved—will help you perform better in future applications.
+            After each rejection, professionally request feedback about your application or interview performance. Understanding specific areas for improvement will strengthen future applications.
           </p>
           <p>
-            Reach out to alumni or mentors in your network who may have gone through similar experiences. They can provide insight into how they navigated rejection and found success.
+            Connect with mentors and alumni who can provide valuable insights from their own experiences with rejection and success.
           </p>
         </li>
         <li style={{ '--li-index': 3 }}>
-          <strong>Develop New Skills and Strengthen Weak Areas</strong>
+          <strong>Address Skill Gaps</strong>
           <p>
-            Identify patterns in your rejections. Are there particular skills or qualifications that you're consistently lacking? Use this insight to develop new expertise, either through online courses, certifications, or attending workshops specific to your industry.
+            Analyze patterns in your rejections to identify any consistent missing qualifications or skills. Develop these areas through targeted online courses, certifications, or workshops.
           </p>
           <p>
-            Engage in side projects or volunteer work related to your field. Not only does this demonstrate initiative and passion, but it also gives you more material to enhance your portfolio.
+            Take on relevant side projects or volunteer work to build practical experience and enhance your portfolio.
           </p>
         </li>
         <li style={{ '--li-index': 4 }}>
-          <strong>Maintain a Strong Support System</strong>
+          <strong>Build Your Support Network</strong>
           <p>
-            It's easy to feel isolated when faced with multiple rejections, but it's important to lean on your friends, family, and college career resources. Stay connected with your peers who are also going through the job search process. Sharing your challenges and successes can help ease the mental burden.
+            Stay connected with peers, family, and friends during your job search journey. Share your experiences and challenges with others who understand your situation.
           </p>
           <p>
-            Many campuses have mental health services that can offer counseling and support to help you stay mentally resilient during tough times.
+            Utilize campus resources, including career services and counseling support, to maintain your emotional well-being during the search process.
           </p>
         </li>
         <li style={{ '--li-index': 5 }}>
-          <strong>Stay Active and Focused</strong>
+          <strong>Maintain Forward Momentum</strong>
           <p>
-            It's important to maintain momentum during your search. Set small, achievable goals for yourself, such as applying to three high-quality positions per week or attending a networking event every month. Keeping active will prevent feelings of stagnation.
+            Set achievable weekly goals for your job search, such as a specific number of quality applications or networking events to attend.
           </p>
           <p>
-            Don't let rejections define your self-worth. Practice self-care, whether it's through exercise, mindfulness, or pursuing hobbies outside of your job search. Maintaining a healthy balance will keep you energized and ready for the right opportunity when it comes.
+            Practice self-care and maintain interests outside of your job search to stay energized and mentally prepared for opportunities.
           </p>
         </li>
       </ul>

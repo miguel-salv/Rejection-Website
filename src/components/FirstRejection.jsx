@@ -7,9 +7,12 @@ function FirstRejection() {
       <header className="page-header">
         <div className="header-content">
           <div className="header-text">
-            <h1>Your First Rejection: A Step Toward Growth</h1>
+            <h1>Your First Rejection: It's Okay to Feel Disappointed</h1>
             <p>
-              Remember, every rejection is an opportunity in disguise. Reflect on the lessons learned and use them to sharpen your approach.
+              Getting your first job rejection can be particularly tough. It's completely normal to feel disappointed, frustrated, or even question your capabilities. These feelings are valid and shared by many students at this stage.
+            </p>
+            <p>
+              Remember that a rejection is not a reflection of your worth or potential. It's simply one step in your professional journey, and every successful person has faced similar challenges.
             </p>
           </div>
           <img 
@@ -19,27 +22,53 @@ function FirstRejection() {
           />
         </div>
       </header>
-      <h2>Key Steps for Growth:</h2>
+
+      <h2>Next Steps for Growth:</h2>
       <ul>
         <li style={{ '--li-index': 1 }}>
           <strong>Gather Comprehensive Feedback</strong>
-          <p>Request feedback for each stage of the hiring process to understand areas for improvement.</p>
+          <p>
+            Reach out to the hiring team with a professional email requesting specific feedback about your application and interview performance.
+          </p>
+          <p>
+            Use this feedback constructively to identify areas where you can improve and prepare better for future opportunities.
+          </p>
         </li>
         <li style={{ '--li-index': 2 }}>
-          <strong>Evaluate Your Resume</strong>
-          <p>Your resume is your first impression. Ensure it's comprehensive yet concise, highlighting your key achievements and skills.</p>
+          <strong>Evaluate Your Application Materials</strong>
+          <p>
+            Review your resume and cover letter with fresh eyes, ensuring they effectively communicate your skills and experiences.
+          </p>
+          <p>
+            Work with your career center or mentor to refine these documents and make them more impactful for future applications.
+          </p>
         </li>
         <li style={{ '--li-index': 3 }}>
-          <strong>Review Interview Performance</strong>
-          <p>If you're getting interviews but not offers, focus on improving your interview skills and presentation.</p>
+          <strong>Strengthen Interview Skills</strong>
+          <p>
+            Practice common interview questions and work on delivering clear, confident responses that highlight your capabilities.
+          </p>
+          <p>
+            Consider recording mock interviews to identify areas where you can improve your communication and presentation style.
+          </p>
         </li>
         <li style={{ '--li-index': 4 }}>
-          <strong>Maintain a Growth Mindset</strong>
-          <p>Remember that rejection is a universal experience. Use it as a learning opportunity rather than a setback.</p>
+          <strong>Develop Resilience</strong>
+          <p>
+            Remember that rejection is a normal part of the professional journey and doesn't define your worth or potential.
+          </p>
+          <p>
+            Focus on the learning opportunities each application process provides, using them to build confidence and experience.
+          </p>
         </li>
         <li style={{ '--li-index': 5 }}>
-          <strong>Manage Rejection Sensitivity</strong>
-          <p>Don't let fear of rejection hold you back. Each application is a new opportunity, independent of past outcomes.</p>
+          <strong>Keep Moving Forward</strong>
+          <p>
+            Continue to explore new opportunities while maintaining a positive outlook. Each application is a fresh start.
+          </p>
+          <p>
+            Stay engaged with your field through networking events, industry news, and professional development opportunities.
+          </p>
         </li>
       </ul>
     </div>
