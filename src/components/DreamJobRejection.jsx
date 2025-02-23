@@ -22,8 +22,8 @@ function DreamJobRejection() {
           />
         </div>
       </header>
-      <h2>Steps to Rebuild:</h2>
-      <ul>
+      <h2>Steps to Move Forward:</h2>
+      <ul className="steps-list">
         <li style={{ '--li-index': 1 }}>
           <strong>Process and Reflect</strong>
           <p>

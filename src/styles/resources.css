@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .resource-card {
-    display: block; 
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    max-width: fit-content;
     text-decoration: none; 
     cursor: pointer;
     background: var(--card-bg);
     border-radius: 16px;
     box-shadow: 0 4px 24px var(--shadow-color);
-    padding: 1.5rem 2rem;
     margin-bottom: 2rem;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
 .resource-card:hover {
@@ -21,7 +25,7 @@
 }
 
 .resource-card::after {
-    content: '↗';
+    content: '';
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -44,9 +48,10 @@
 }
 
 .resource-card h3 {
-    font-size: 1.1rem;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin: 0.5rem 0 0;
     font-weight: 500;
 }
 
@@ -83,35 +88,32 @@
     counter-increment: resource-steps;
     list-style: none;
     position: relative;
-    padding: 1.5rem;
+    padding: 1rem 0 1rem 2rem;
     margin-bottom: 1.5rem;
-    background: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    border-left: 2px solid var(--border-color);
 }
 
 .resource-content ol > li:hover {
-    transform: translateX(8px);
-    box-shadow: 0 4px 12px var(--shadow-color);
+    border-left-color: var(--link-color);
 }
 
 .resource-content ol > li::before {
     content: counter(resource-steps);
     position: absolute;
-    left: -12px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: -16px;
+    top: 0;
     background: linear-gradient(120deg, #6B63FF, #4338ca);
     color: white;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
     font-weight: 600;
+    transform: none;
 }
 
 .resource-content strong {
@@ -236,6 +238,73 @@
   padding: 0 1rem;
 }
 
+.page-container > div {
+  margin-bottom: 3rem;
+}
+
+.page-container > div > h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.page-container > div > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--link-color);
+  border-radius: 2px;
+}
+
+/* Add flex container for title and button */
+.page-container > div > .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Adjust title styles */
+.page-container > div > .header-container h2 {
+  margin: 0;
+  padding-bottom: 1rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.page-container > div > .header-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--link-color);
+  border-radius: 2px;
+}
+
+.header-container .resource-card {
+  padding: 0.75rem 1.5rem;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.header-container .resource-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-container .resource-card:hover h3 {
+  color: var(--link-color);
+}
+
 .mobile-nav-arrows {
   display: none;
   position: fixed;
@@ -298,6 +367,8 @@
   }
 
   .resource-card {
+    width: 100%;
+    justify-content: center;
     padding: 1.25rem 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -307,5 +378,19 @@
     padding: 1.5rem 0.75rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .page-container > div > .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .resource-card {
+    width: 100%;
+    justify-content: center;
   }
 }

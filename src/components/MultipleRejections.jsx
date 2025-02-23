@@ -23,7 +23,7 @@ function MultipleRejections() {
         </div>
       </header>
       <h2>Steps to Move Forward:</h2>
-      <ul>
+      <ul className="steps-list">
         <li style={{ '--li-index': 1 }}>
           <strong>Refine Your Application Strategy</strong>
           <p>

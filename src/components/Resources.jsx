@@ -113,10 +113,12 @@ function Resources() {
 
       <div className="page-container">
         <div id="resume">
-          <a href={resourceUrls.resume} className="resource-card" target="_blank" rel="noopener noreferrer">
+          <div className="header-container">
             <h2>Resume Help</h2>
-            <h3><i className="fas fa-link"></i>  Website: CMU Resume & Cover Letter Resources</h3>
-          </a>
+            <a href={resourceUrls.resume} className="resource-card" target="_blank" rel="noopener noreferrer">
+              <h3><i className="fas fa-link"></i> Access CMU Resources</h3>
+            </a>
+          </div>
           <div className="resource-content">
             <p>Steps to Use This Resource Effectively:</p>
             <ol>
@@ -154,10 +156,12 @@ function Resources() {
         </div>
 
         <div id="college">
-          <a href={resourceUrls.college} className="resource-card" target="_blank" rel="noopener noreferrer">
-            <h2>CMU Career Resources by College</h2>
-            <h3><i className="fas fa-link"></i> Website: CMU College-Specific Career Resources</h3>
-          </a>
+          <div className="header-container">
+            <h2>Resources by College</h2>
+            <a href={resourceUrls.college} className="resource-card" target="_blank" rel="noopener noreferrer">
+              <h3><i className="fas fa-link"></i> Find Your Department</h3>
+            </a>
+          </div>
           <div className="resource-content">
             <p>Steps to Use This Resource Effectively:</p>
             <ol>
@@ -194,10 +198,12 @@ function Resources() {
         </div>
 
         <div id="reddit">
-          <a href={resourceUrls.reddit} className="resource-card" target="_blank" rel="noopener noreferrer">
+          <div className="header-container">
             <h2>Career Guidance from Reddit</h2>
-            <h3><i className="fas fa-link"></i>  Website: Reddit Career Guidance Forum</h3>
-          </a>
+            <a href={resourceUrls.reddit} className="resource-card" target="_blank" rel="noopener noreferrer">
+              <h3><i className="fas fa-link"></i> Join the Discussion</h3>
+            </a>
+          </div>
           <div className="resource-content">
             <p>Steps to Use This Resource Effectively:</p>
             <ol>
@@ -234,10 +240,12 @@ function Resources() {
         </div>
 
         <div id="interview">
-          <a href={resourceUrls.interview} className="resource-card" target="_blank" rel="noopener noreferrer">
-            <h2>Interview Prep & Career Counseling</h2>
-            <h3><i className="fas fa-link"></i>  Website: CMU INI Career Services</h3>
-          </a>
+          <div className="header-container">
+            <h2>Interview Prep & Counseling</h2>
+            <a href={resourceUrls.interview} className="resource-card" target="_blank" rel="noopener noreferrer">
+              <h3><i className="fas fa-link"></i> Schedule a Session</h3>
+            </a>
+          </div>
           <div className="resource-content">
             <p>Steps to Use This Resource Effectively:</p>
             <ol>
@@ -273,10 +281,12 @@ function Resources() {
         </div>
 
         <div id="wellbeing">
-          <a href={resourceUrls.wellbeing} className="resource-card" target="_blank" rel="noopener noreferrer">
-            <h2>Mindfulness & Mental Well-being</h2>
-            <h3><i className="fas fa-link"></i>  Website: CMU Well-being & Therapy Resources</h3>
-          </a>
+          <div className="header-container">
+            <h2>Mental Well-being Support</h2>
+            <a href={resourceUrls.wellbeing} className="resource-card" target="_blank" rel="noopener noreferrer">
+              <h3><i className="fas fa-link"></i> Get Support</h3>
+            </a>
+          </div>
           <div className="resource-content">
             <p>Steps to Use This Resource Effectively:</p>
             <ol>

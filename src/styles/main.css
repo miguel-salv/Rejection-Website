@@ -313,6 +313,76 @@ div {
     min-height: 100vh;
 }
 
+/* Add these styles for consistent step formatting across all sections */
+.steps-list {
+    counter-reset: steps;
+    padding: 0;
+    margin: 0;
+}
+
+.steps-list li {
+    counter-increment: steps;
+    list-style: none;
+    position: relative;
+    padding: 1rem 0 1rem 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 2px solid var(--border-color);
+    animation: listFadeIn 0.6s ease-out calc(0.1s * var(--li-index, 1)) forwards;
+}
+
+.steps-list li:hover {
+    border-left-color: var(--link-color);
+}
+
+.steps-list li::before {
+    content: counter(steps);
+    position: absolute;
+    left: -16px;
+    top: 0;
+    background: linear-gradient(120deg, #6B63FF, #4338ca);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transform: none;
+}
+
+.steps-list strong {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+.steps-list p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.steps-list li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .steps-list li {
+        padding: 1rem 0 1rem 1.5rem;
+    }
+
+    .steps-list li::before {
+        left: -14px;
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 1000px) {
     body {
         margin-top: 0;
