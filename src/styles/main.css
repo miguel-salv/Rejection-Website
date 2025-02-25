@@ -15,6 +15,12 @@
   --link-color: #6B63FF;
   --heading-color: #1a202c;
   --notice-color: rgba(107, 99, 255, 0.1);
+  --font-scale: 1.25;
+  --font-size-base: 1rem;
+  --font-size-sm: calc(var(--font-size-base) / var(--font-scale));
+  --font-size-lg: calc(var(--font-size-base) * var(--font-scale));
+  --font-size-xl: calc(var(--font-size-lg) * var(--font-scale));
+  --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
 
   transition: 
     background 0.3s ease,
@@ -81,6 +87,7 @@ body {
 .nav-menu {
     background: var(--nav-bg);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
@@ -145,9 +152,9 @@ h1, h2, h3, h4, h5, h6 {
     animation: textFadeIn 0.8s ease-out forwards;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
 
 p {
     margin-bottom: 1.5rem;
@@ -313,7 +320,6 @@ div {
     min-height: 100vh;
 }
 
-/* Add these styles for consistent step formatting across all sections */
 .steps-list {
     counter-reset: steps;
     padding: 0;
@@ -501,6 +507,9 @@ div {
         transition: background-color 0.3s ease,
                     border-color 0.3s ease,
                     transform 0.3s ease;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 -4px 20px var(--shadow-color);
     }
 
     .mobile-nav-toggle.open {
@@ -667,7 +676,6 @@ div {
   font-size: 0.8rem;
 }
 
-/* Add styles for inline footnote references */
 sup {
   color: var(--link-color);
   font-size: 0.75em;
