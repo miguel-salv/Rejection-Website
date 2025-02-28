@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-content">
         <div className="notice-text-container">
           <p className="student-project-notice">This is a student-created project and is not officially affiliated with Carnegie Mellon University.</p>
-          <p className="copyright">© {new Date().getFullYear()} Miguel Salvacion</p>
+          <p className="copyright">Copyright © {new Date().getFullYear()}</p>
         </div>
         <div className="footer-section">
           <h4>Contact Creator</h4>

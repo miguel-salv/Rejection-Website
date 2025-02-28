@@ -54,16 +54,16 @@ function FirstRejection() {
             Reach out to the hiring team with a professional email requesting specific feedback about your application and interview performance.
           </p>
           <p>
-            Use this feedback constructively to identify areas where you can improve and prepare better for future opportunities.
+            Use this feedback to identify areas where you can improve and prepare better for future opportunities.
           </p>
         </li>
         <li style={{ '--li-index': 2 }}>
           <strong>Evaluate Your Application Materials</strong>
           <p>
-            Review your resume and cover letter with fresh eyes, ensuring they effectively communicate your skills and experiences.
+            Review your resume and cover letter, ensuring they effectively communicate your skills and experiences.
           </p>
           <p>
-            Work with your career center or mentor to refine these documents and make them more impactful for future applications.
+            Work with the CPDC or a mentor to refine these documents and make them more impactful for future applications.
           </p>
         </li>
         <li style={{ '--li-index': 3 }}>
@@ -72,11 +72,11 @@ function FirstRejection() {
             Practice common interview questions and work on delivering clear, confident responses that highlight your capabilities.
           </p>
           <p>
-            Consider recording mock interviews to identify areas where you can improve your communication and presentation style.
+            Record mock interviews to identify areas where you can improve your communication and presentation style.
           </p>
         </li>
         <li style={{ '--li-index': 4 }}>
-          <strong>Rejection Sensitivity</strong>
+          <strong>Avoid Rejection Sensitivity</strong>
           <p>
             Rejection Sensitivity is a learned disposition where individuals anxiously expect rejection when going into a job application setting, increasing the chance of rejection.<sup>1</sup>
           </p>

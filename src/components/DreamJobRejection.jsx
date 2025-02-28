@@ -23,10 +23,10 @@ function DreamJobRejection() {
           <div className="header-text">
             <h1>Lost Out on a Dream Role? Let's Move Forward Together</h1>
             <p>
-              It's natural to feel disappointed when a job opportunity you've invested your hopes in doesn't work out. Give yourself time to process the setback, but remember that this is just one step in your professional journey. Every successful person has faced rejection at some point - what matters is how you use this experience to bounce back stronger.
+              It's natural to feel disappointed when a job opportunity you've invested your hopes in doesn't work out. Give yourself time to process the setback, but remember that this is just one step in your professional journey.
             </p>
             <p>
-              Consider this moment not as an endpoint, but as valuable feedback that can help shape your career path. Many professionals later find that what seemed like a setback actually guided them toward even better opportunities they hadn't considered before.
+              In the end, what matters is how you use this experience to bounce back stronger. Consider this moment not as a roadblock, but as valuable feedback that can help shape your career path.
             </p>
           </div>
           <img 
@@ -80,7 +80,7 @@ function DreamJobRejection() {
             Send thoughtful follow-up messages to your interviewers, expressing gratitude for the opportunity and their time.
           </p>
           <p>
-            Build and nurture your professional network through LinkedIn and industry events to create future opportunities.
+            Build and nurture your professional network through LinkedIn and other online platforms to create future opportunities.
           </p>
         </li>
         <li style={{ '--li-index': 6 }}>

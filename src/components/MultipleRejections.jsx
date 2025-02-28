@@ -25,7 +25,7 @@ function MultipleRejections() {
               It's not uncommon for college students to encounter multiple rejections, especially during the competitive internship or entry-level job search. After sending out countless applications and attending interviews, it's easy to feel disheartened.
             </p>
             <p>
-            However, persistence and adaptability are crucial skills that will serve you throughout your career. Every rejection is a stepping stone toward finding the right opportunity that aligns with your goals.
+            However, persistence is a crucial skill that will serve you throughout your career. Every rejection is a step towards finding the right opportunity that aligns with your goals.
             </p>
           </div>
           <img 
@@ -70,7 +70,7 @@ function MultipleRejections() {
             Analyze patterns in your rejections to identify any consistent missing qualifications or skills. Develop these areas through targeted online courses, certifications, or workshops.
           </p>
           <p>
-            Take on relevant side projects or volunteer work to build practical experience and enhance your portfolio.
+            Take on relevant side projects or experience to build practical experience and enhance your portfolio.
           </p>
         </li>
         <li style={{ '--li-index': 5 }}>
@@ -85,7 +85,7 @@ function MultipleRejections() {
         <li style={{ '--li-index': 6 }}>
           <strong>Maintain Forward Momentum</strong>
           <p>
-            Set achievable weekly goals for your job search, such as a specific number of quality applications or networking events to attend.
+            Set achievable weekly goals for your job search, such as a specific number of applications or networking events to attend.
           </p>
           <p>
             Practice self-care and maintain interests outside of your job search to stay energized and mentally prepared for opportunities.

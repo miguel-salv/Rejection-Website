@@ -69,7 +69,7 @@ function HomePage() {
             </Link>
             <Link to="/resources" className="nav-card">
               <h3>Resources</h3>
-              <p>Access CMU-specific career resources, interview prep, and mental well-being support</p>
+              <p>Access CMU career resources, interview prep, and mental well-being support</p>
             </Link>
           </div>
         </div>
@@ -87,11 +87,11 @@ function HomePage() {
           </div>
           <div className="tips-grid">
             {[
-              "Utilize your college career center for guidance",
+              "Utilize CMU's resources for guidance",
               "Engage in campus networking events and fairs",
               "Request feedback after internship interviews",
               "Build relationships with professors and alumni",
-              "Balance academics with practical career development"
+              "Balance your academics with career development"
             ].map((tip, index) => (
               <div key={index} className="tip-card">
                 <span className="tip-number">{index + 1}</span>
